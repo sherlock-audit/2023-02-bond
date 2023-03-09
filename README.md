@@ -14,7 +14,7 @@ Bond Protocol is comprised of 3 main types of contracts:
 -   Tellers - Handle user purchases and issuing/redeeming of bond tokens
 -   Aggregator - Maintains unique count of markets across system and provides convenient view functions for querying data across multiple Auctioneers or Tellers
 
-![Bond Protocol Architecture](./media/Bond%20System%20Architecture%20-%20General.png)
+![Bond Protocol Architecture](./bonds/media/Bond%20System%20Architecture%20-%20General.png)
 
 Bond Protocol was launched on mainnet in late 2022 with a single auction type: Sequential Dutch Auctions. The purpose of this audit is to review new auction types that will be added to the existing Bond Protocol system. Additionally, we have created a wrapper on the Gnosis EasyAuction contract to create a seamless experience for creating batch auctions to sell Fixed-Expiry Bond Tokens (ERC20) created on the Bond Fixed Expiry Teller contract. The existing smart contracts can be found on the [Bond Protocol GitHub](https://github.com/Bond-Protocol/bond-contracts) and documentation for them can be found on the [Bond Protocol documentation site](https://docs.bondprotocol.finance/).
 
@@ -147,7 +147,7 @@ Market creators can also set a minimum total discount from the starting price, w
 
 The below chart shows a notional example of how price might evolve over an OFDA market.
 
-![Oracle-based Fixed Discount Auction](./media/Oracle-based%20Fixed%20Discount%20Auction.png)
+![Oracle-based Fixed Discount Auction](./bonds/media/Oracle-based%20Fixed%20Discount%20Auction.png)
 
 ### Oracle Sequential Dutch Auctioneer (OSDA)
 
@@ -173,7 +173,7 @@ Market creators can also set a minimum total discount from the starting price, w
 
 The below chart shows a notional example of how price might evolve over an OSDA market.
 
-![Oracle-based Sequential Dutch Auctioneer](./media/Oracle-based%20Sequential%20Dutch%20Auction.png)
+![Oracle-based Sequential Dutch Auctioneer](./bonds/media/Oracle-based%20Sequential%20Dutch%20Auction.png)
 
 If you're familiar with other dutch auction mechanism designs, this version of the SDA is similar to [Paradigm's Continuous Gradual Dutch Auction (GDA) model](https://www.paradigm.xyz/2022/04/gda#continuous-gda) with linear decay, but there is no price slippage based on the purchase amount. Note the version described in the link above uses exponential decay vs. linear decay, but it's possible to derive a linear decay version as well.
 
@@ -197,7 +197,7 @@ Additionally, since Chainlink is the most popular oracle system used in DeFi, we
 
 The fixed price auctioneer is the simplest auction variant and does what is sounds like: allows creators to buy/sell a set capacity of token at the quoted price for a certain amount of time. Because of this, it is similar to a limit order in an order book exchange. The goal of this auction variant is to sell as many tokens as possible at the set price. Unlike the SDA auction variants, it is not seeking to sell the full capacity. For completeness, here is an example price/time chart for Fixed Price Auctions:
 
-![Fixed Price Auction](./media/Fixed%20Price%20Auction.png)
+![Fixed Price Auction](./bonds/media/Fixed%20Price%20Auction.png)
 
 ## Bond Batch Auction V1 (Gnosis EasyAuction Wrapper)
 
