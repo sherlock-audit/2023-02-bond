@@ -216,7 +216,7 @@ git clone https://github.com/sherlock-audit/2023-02-bond
 ## Install dependencies
 
 ```sh
-cd 2023-02-bond
+cd 2023-02-bond/bonds
 npm install # install npm modules for linting and doc generation
 forge build # installs git submodule dependencies when contracts are compiled
 ```
