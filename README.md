@@ -217,7 +217,10 @@ git clone https://github.com/sherlock-audit/2023-02-bond
 
 ```sh
 cd 2023-02-bond/bonds
-npm install # install npm modules for linting and doc generation
+touch .env # Add .env file
+# Add RPC_URL env variable for an ETH mainnet node to the .env file
+# If not, BatchAuctionV1.t.sol will fail since it uses a mainnet fork
+npm install # install npm modules for linting and doc generation, optional
 forge build # installs git submodule dependencies when contracts are compiled
 ```
 
