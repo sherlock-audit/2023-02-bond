@@ -1,0 +1,15 @@
+[submodule "lib/ds-test"]
+	path = bonds/lib/ds-test
+	url = https://github.com/dapphub/ds-test
+[submodule "lib/solmate"]
+	path = bonds/lib/solmate
+	url = https://github.com/Rari-Capital/solmate
+[submodule "lib/openzeppelin-contracts"]
+	path = bonds/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "lib/clones-with-immutable-args"]
+	path = bonds/lib/clones-with-immutable-args
+	url = https://github.com/wighawag/clones-with-immutable-args
+[submodule "lib/forge-std"]
+	path = bonds/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
